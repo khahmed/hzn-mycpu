@@ -1,0 +1,20 @@
+{
+  "org": "$HZN_ORG_ID",
+  "label": "$CPU_NAME for $ARCH",
+  "description": "Provides a REST API to query the CPU percent",
+  "public": true,
+  "documentation": "https://console.test.cloud.ibm.com/docs/services/edge-fabric/poc/cpu.html",
+  "url": "$MYDOMAIN.$CPU_NAME",
+  "version": "$CPU_VERSION",
+  "arch": "$ARCH",
+  "sharable": "singleton",
+  "requiredServices": [],
+  "userInput": [],
+  "deployment": {
+    "services": {
+      "cpu": {
+        "image": "$DOCKER_HUB_ID/${ARCH}_$CPU_NAME:$CPU_VERSION"
+      }
+    }
+  }
+}
